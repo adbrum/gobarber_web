@@ -9,6 +9,7 @@ import { Container, Content, Profile } from './styles';
 
 export default function Header() {
   const profile = useSelector((state) => state.user.profile);
+
   return (
     <Container>
       <Content>
@@ -25,7 +26,7 @@ export default function Header() {
             </div>
             <img
               src={
-                profile.avatar.url ||
+                profile.avatar ||
                 'https://api.adorable.io/avatars/50/abott@adorable.png'
               }
               alt="Adriano Regis"
